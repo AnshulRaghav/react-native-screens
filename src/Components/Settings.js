@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { SimpleLineIcons } from '@expo/vector-icons';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -15,12 +15,12 @@ export default class Settings extends Component {
             <View style={{flex:1,backgroundColor:'#ffffff'}}>
                 {this.state.tabs.map((item,index) => {
                     return(
-                        <View 
+                        <TouchableOpacity 
                         key={item}
                         style={styles.tabs}>
                             <Text style={{fontSize:18}}>{item}</Text>
                             <SimpleLineIcons name="arrow-right" size={18} color="grey"/>
-                        </View>
+                        </TouchableOpacity>
                     )
                 })}
                 <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#FA58BF', '#CA16FE']} style={styles.linearGradient}>
