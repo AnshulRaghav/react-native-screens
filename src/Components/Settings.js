@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native';
 import { SimpleLineIcons } from '@expo/vector-icons';
+import LinearGradient from 'react-native-linear-gradient';
 
 export default class Settings extends Component {
     constructor(props) {
@@ -17,11 +18,16 @@ export default class Settings extends Component {
                         <View 
                         key={item}
                         style={styles.tabs}>
-                            <Text>{item}</Text>
-                            <SimpleLineIcons name="arrow-right" size={18}/>
+                            <Text style={{fontSize:18}}>{item}</Text>
+                            <SimpleLineIcons name="arrow-right" size={18} color="grey"/>
                         </View>
                     )
                 })}
+                <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#FA58BF', '#9723F6']} style={styles.linearGradient}>
+                    <Text style={styles.buttonText}>
+                        LOGOUT
+                    </Text>
+                </LinearGradient>
             </View>
         )
     }
@@ -32,12 +38,26 @@ const styles = StyleSheet.create({
         backgroundColor:'#E6E6E6',
         borderRadius:12,
         width:'95%',
-        fontSize:32,
         alignSelf:'center',
         padding:18,
         marginBottom:8,
+        marginTop:8,
         alignItems:'center',
         flexDirection:'row',
-        justifyContent:'space-between'
-    }
+        justifyContent:'space-between',
+    },
+    linearGradient: {
+        paddingLeft: 48,
+        paddingRight: 48,
+        borderRadius: 24,
+        alignSelf:'center',
+        marginTop:16
+      },
+      buttonText: {
+        fontSize:16,
+        textAlign: 'center',
+        margin: 10,
+        color: '#ffffff',
+        backgroundColor: 'transparent',
+      },
 })
