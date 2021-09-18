@@ -7,6 +7,7 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 import Home from './src/Components/Home';
 import Settings from './src/Components/Settings';
 import FaceVerification from './src/Components/FaceVerification';
+import AboutUs from './src/Components/AboutUs';
 
 const Stack = createStackNavigator();
 
@@ -61,6 +62,18 @@ const StackNavigator = () => {
 							name="arrow-left" 
 							size={18}
               color="#ffffff" />
+						)
+					}} 
+				/>
+        <Stack.Screen 
+					name="About Us" 
+					component={AboutUs}
+					options={{
+						title:'About Us',
+            headerBackImage: () => (
+							<SimpleLineIcons 
+							name="arrow-left" 
+							size={18} />
 						)
 					}} 
 				/>

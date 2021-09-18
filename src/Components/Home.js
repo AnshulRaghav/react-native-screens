@@ -5,7 +5,7 @@ export default class Home extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            tabs : ['Settings','Profile','Face Verification']
+            tabs : ['Settings','Profile','Face Verification','About Us']
         }
     }
     render() {
