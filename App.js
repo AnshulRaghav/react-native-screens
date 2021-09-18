@@ -10,6 +10,7 @@ import FaceVerification from './src/Components/FaceVerification';
 import AboutUs from './src/Components/AboutUs';
 import UploadPoster from './src/Components/UploadPoster';
 import EditProfile from './src/Components/EditProfile';
+import ChatPrice from './src/Components/ChatPrice';
 
 const Stack = createStackNavigator();
 
@@ -25,7 +26,7 @@ const StackNavigator = () => {
 						elevation: 0,
 						shadowOpacity: 0,
 					},
-          headerTitleAlign: 'center'
+					headerTitleAlign: 'center'
 				}}
 			>
 				<Stack.Screen 
@@ -35,62 +36,69 @@ const StackNavigator = () => {
 						title:'Home',
 					}} 
 				/>
-        <Stack.Screen 
+				<Stack.Screen 
 					name="Settings" 
 					component={Settings}
 					options={{
 						title:'Settings',
-            headerBackImage: () => (
+						headerBackImage: () => (
 							<SimpleLineIcons 
 							name="arrow-left" 
 							size={18} />
 						)
 					}} 
 				/>
-        <Stack.Screen 
+				<Stack.Screen 
 					name="Face Verification" 
 					component={FaceVerification}
 					options={{
 						title:'Face Verification',
-            headerStyle:{
-              backgroundColor:'#CA16FE',
-              elevation:0
-            },
-            headerTitleStyle:{
-              color:'#ffffff'
-            },
-            headerBackImage: () => (
+						headerStyle:{
+						backgroundColor:'#CA16FE',
+						elevation:0
+						},
+						headerTitleStyle:{
+						color:'#ffffff'
+						},
+						headerBackImage: () => (
 							<SimpleLineIcons 
 							name="arrow-left" 
 							size={18}
-              color="#ffffff" />
+							color="#ffffff" />
 						)
 					}} 
 				/>
-        <Stack.Screen 
+				<Stack.Screen 
 					name="About Us" 
 					component={AboutUs}
 					options={{
 						title:'About Us',
-            headerBackImage: () => (
+						headerBackImage: () => (
 							<SimpleLineIcons 
 							name="arrow-left" 
 							size={18} />
 						)
 					}} 
 				/>
-        <Stack.Screen 
+				<Stack.Screen 
 					name="Upload Poster" 
 					component={UploadPoster}
 					options={{
 						title:'',
 					}} 
 				/>
-        <Stack.Screen 
+				<Stack.Screen 
 					name="Edit Profile" 
 					component={EditProfile}
 					options={{
 						title:'Edit Profile',
+					}} 
+				/>
+				<Stack.Screen 
+					name="Chat Price" 
+					component={ChatPrice}
+					options={{
+						title:'My Chat Price',
 					}} 
 				/>
 			</Stack.Navigator>
