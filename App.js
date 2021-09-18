@@ -9,6 +9,7 @@ import Settings from './src/Components/Settings';
 import FaceVerification from './src/Components/FaceVerification';
 import AboutUs from './src/Components/AboutUs';
 import UploadPoster from './src/Components/UploadPoster';
+import EditProfile from './src/Components/EditProfile';
 
 const Stack = createStackNavigator();
 
@@ -83,6 +84,13 @@ const StackNavigator = () => {
 					component={UploadPoster}
 					options={{
 						title:'',
+					}} 
+				/>
+        <Stack.Screen 
+					name="Edit Profile" 
+					component={EditProfile}
+					options={{
+						title:'Edit Profile',
 					}} 
 				/>
 			</Stack.Navigator>
