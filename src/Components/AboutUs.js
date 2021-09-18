@@ -32,7 +32,7 @@ export default class AboutUs extends Component {
 
 const styles = StyleSheet.create({
     tabs : {
-        backgroundColor:'#E6E6E6',
+        backgroundColor:'#EEEEF6',
         borderRadius:12,
         width:'95%',
         alignSelf:'center',
