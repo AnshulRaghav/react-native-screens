@@ -88,7 +88,9 @@ export default class EditProfile extends Component {
                         return(
                             <TouchableOpacity 
                             key={item}
-                            style={styles.tabs}>
+                            style={styles.tabs}
+                            onPress={item==='Bio' ? this.toggleAnimatedModal : null}
+                            >
                                 <Text style={{fontSize:18,fontWeight:'bold'}}>{item}</Text>
                                 <SimpleLineIcons name="arrow-right" size={14} color="grey"/>
                             </TouchableOpacity>
@@ -97,7 +99,6 @@ export default class EditProfile extends Component {
                 </View>
                 <TouchableOpacity 
                 style={styles.tagTab} 
-                onPress={this.toggleAnimatedModal}
                 >
                     <View style={{flexDirection:'row',alignItems:'center'}}>
                         <FontAwesome5 name="tag" size={18} color="#ffffff" style={styles.icon}/>
