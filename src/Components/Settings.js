@@ -23,11 +23,13 @@ export default class Settings extends Component {
                         </TouchableOpacity>
                     )
                 })}
-                <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#FA58BF', '#CA16FE']} style={styles.linearGradient}>
-                    <Text style={styles.buttonText}>
-                        LOGOUT
-                    </Text>
-                </LinearGradient>
+                <TouchableOpacity>
+                    <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#FA58BF', '#CA16FE']} style={styles.linearGradient}>
+                        <Text style={styles.buttonText}>
+                            LOGOUT
+                        </Text>
+                    </LinearGradient>
+                </TouchableOpacity>
             </View>
         )
     }
