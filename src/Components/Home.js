@@ -5,7 +5,7 @@ export default class Home extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            tabs : ['Settings','Profile','Face Verification','About Us']
+            tabs : ['Upload Poster','Face Verification','Profile','Settings','About Us']
         }
     }
     render() {
@@ -17,7 +17,7 @@ export default class Home extends Component {
                         onPress={() => this.props.navigation.navigate(item)}
                         key={item}
                         style={styles.tabs}>
-                            <Text style={{fontWeight:'bold'}}>{item}</Text>
+                            <Text style={{fontWeight:'bold',fontSize:18}}>{item}</Text>
                         </TouchableOpacity>
                     )
                 })}
@@ -28,7 +28,7 @@ export default class Home extends Component {
 
 const styles = StyleSheet.create({
     tabs : {
-        backgroundColor:'#E6E6E6',
+        backgroundColor:'#EEEEF6',
         borderRadius:12,
         width:'80%',
         fontSize:24,

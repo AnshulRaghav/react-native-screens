@@ -8,6 +8,7 @@ import Home from './src/Components/Home';
 import Settings from './src/Components/Settings';
 import FaceVerification from './src/Components/FaceVerification';
 import AboutUs from './src/Components/AboutUs';
+import UploadPoster from './src/Components/UploadPoster';
 
 const Stack = createStackNavigator();
 
@@ -75,6 +76,13 @@ const StackNavigator = () => {
 							name="arrow-left" 
 							size={18} />
 						)
+					}} 
+				/>
+        <Stack.Screen 
+					name="Upload Poster" 
+					component={UploadPoster}
+					options={{
+						title:'',
 					}} 
 				/>
 			</Stack.Navigator>
