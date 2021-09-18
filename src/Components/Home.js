@@ -5,7 +5,7 @@ export default class Home extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            tabs : ['Settings','Profile','Extra']
+            tabs : ['Settings','Profile','Face Verification']
         }
     }
     render() {
@@ -14,10 +14,10 @@ export default class Home extends Component {
                 {this.state.tabs.map((item,index) => {
                     return(
                         <TouchableOpacity 
-                        onPress={() => this.props.navigation.navigate('Settings')}
+                        onPress={() => this.props.navigation.navigate(item)}
                         key={item}
                         style={styles.tabs}>
-                            <Text>{item}</Text>
+                            <Text style={{fontWeight:'bold'}}>{item}</Text>
                         </TouchableOpacity>
                     )
                 })}
