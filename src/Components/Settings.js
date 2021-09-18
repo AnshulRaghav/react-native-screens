@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import { Text, View,TouchableOpacity, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
+import { SimpleLineIcons } from '@expo/vector-icons';
 
-export default class Home extends Component {
+export default class Settings extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            tabs : ['Settings','Profile','Extra']
+            tabs : ['Blocked','Feed','Rate','About']
         }
     }
     render() {
@@ -13,12 +14,12 @@ export default class Home extends Component {
             <View style={{flex:1,backgroundColor:'#ffffff'}}>
                 {this.state.tabs.map((item,index) => {
                     return(
-                        <TouchableOpacity 
-                        onPress={() => this.props.navigation.navigate('Settings')}
+                        <View 
                         key={item}
                         style={styles.tabs}>
                             <Text>{item}</Text>
-                        </TouchableOpacity>
+                            <SimpleLineIcons name="arrow-right" size={18}/>
+                        </View>
                     )
                 })}
             </View>
@@ -30,12 +31,13 @@ const styles = StyleSheet.create({
     tabs : {
         backgroundColor:'#E6E6E6',
         borderRadius:12,
-        width:'80%',
-        fontSize:24,
+        width:'95%',
+        fontSize:32,
         alignSelf:'center',
-        padding:16,
-        margin:16,
-        alignItems:'center'
+        padding:18,
+        marginBottom:8,
+        alignItems:'center',
+        flexDirection:'row',
+        justifyContent:'space-between'
     }
 })
-
