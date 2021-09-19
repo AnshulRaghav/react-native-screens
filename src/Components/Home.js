@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View,TouchableOpacity, StyleSheet } from 'react-native';
+import { Text, View,TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
 
 export default class Home extends Component {
     constructor(props) {
@@ -10,7 +10,7 @@ export default class Home extends Component {
     }
     render() {
         return (
-            <View style={{flex:1,backgroundColor:'#ffffff'}}>
+            <ScrollView style={{backgroundColor:'#ffffff'}}>
                 {this.state.tabs.map((item,index) => {
                     return(
                         <TouchableOpacity 
@@ -21,7 +21,7 @@ export default class Home extends Component {
                         </TouchableOpacity>
                     )
                 })}
-            </View>
+            </ScrollView>
         )
     }
 }

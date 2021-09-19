@@ -18,7 +18,7 @@ export default class Settings extends Component {
                         <TouchableOpacity 
                         key={item}
                         style={styles.tabs}>
-                            <Text style={{fontSize:18}}>{item}</Text>
+                            <Text>{item}</Text>
                             <SimpleLineIcons name="arrow-right" size={18} color="grey"/>
                         </TouchableOpacity>
                     )

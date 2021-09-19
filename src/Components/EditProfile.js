@@ -1,5 +1,5 @@
 import React, { Component, useRef,useEffect } from 'react'
-import { Image, StyleSheet, Text, TouchableOpacity, View, Animated, Dimensions, Modal, TextInput } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View, Animated, Dimensions, Modal, TextInput, ScrollView } from 'react-native'
 import { SimpleLineIcons, FontAwesome5 } from '@expo/vector-icons';
 
 const BioModal = props => {
@@ -74,7 +74,7 @@ export default class EditProfile extends Component {
 
     render() {
         return (
-            <View>
+            <ScrollView>
                 <View style={{backgroundColor:'#ffffff',padding:24}}>
                     <View style={styles.imgContainer}>
                         <Image source={require('../Avatar/sm.jpg')} style={styles.img} />
@@ -91,7 +91,7 @@ export default class EditProfile extends Component {
                             style={styles.tabs}
                             onPress={item==='Bio' ? this.toggleAnimatedModal : null}
                             >
-                                <Text style={{fontSize:18,fontWeight:'bold'}}>{item}</Text>
+                                <Text style={{fontSize:14,fontWeight:'bold'}}>{item}</Text>
                                 <SimpleLineIcons name="arrow-right" size={14} color="grey"/>
                             </TouchableOpacity>
                         )
@@ -102,7 +102,7 @@ export default class EditProfile extends Component {
                 >
                     <View style={{flexDirection:'row',alignItems:'center'}}>
                         <FontAwesome5 name="tag" size={18} color="#ffffff" style={styles.icon}/>
-                        <Text style={{fontSize:18,fontWeight:'bold'}}>Tag</Text>
+                        <Text style={{fontSize:14,fontWeight:'bold'}}>Tag</Text>
                     </View>
                     <SimpleLineIcons name="arrow-right" size={14} color="grey"/>
                 </TouchableOpacity>
@@ -111,7 +111,7 @@ export default class EditProfile extends Component {
                         <Text style={{fontSize:18,fontWeight:'bold',alignSelf:'center'}}>Bio</Text>
                         <Text style={{color:'grey',marginTop:16,marginBottom:4}}>Up to 50 characters (5/50)</Text>
                         <TextInput style={styles.txtInput} multiline={true} />
-                        <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                        <View style={{flexDirection:'row',justifyContent:'center'}}>
                             <TouchableOpacity style={styles.btnSecondary} onPress={this.toggleAnimatedModal}>
                                 <Text>Cancel</Text>
                             </TouchableOpacity>
@@ -121,7 +121,7 @@ export default class EditProfile extends Component {
                         </View>
                     </BioModal> 
                 : null}
-            </View>
+            </ScrollView>
         )
     }
 }
@@ -155,8 +155,8 @@ const styles = StyleSheet.create({
         flex:1,
         width:'100%',
         padding:18,
-        paddingBottom:32,
-        paddingTop:32,
+        paddingBottom:16,
+        paddingTop:16,
         alignItems:'center',
         flexDirection:'row',
         justifyContent:'space-between',
@@ -167,7 +167,8 @@ const styles = StyleSheet.create({
         alignItems:'center',
         flexDirection:'row',
         justifyContent:'space-between',
-        marginTop:12
+        marginTop:12,
+        marginBottom:24
     },
     icon : {
         padding:8,
@@ -184,16 +185,17 @@ const styles = StyleSheet.create({
     btnSecondary : {
         borderWidth:2,
         padding:8,
-        paddingLeft:32,
-        paddingRight:32,
+        paddingLeft:16,
+        paddingRight:16,
         borderRadius:24,
         borderColor:'#EEEEF6'
     },
     btnPrimary : {
         backgroundColor:'#FFD102',
         padding:8,
-        paddingLeft:32,
-        paddingRight:32,
-        borderRadius:24
+        paddingLeft:16,
+        paddingRight:16,
+        borderRadius:24,
+        marginLeft:8
     }
 })
