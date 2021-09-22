@@ -1,4 +1,4 @@
 # react-native-screens
 Navigations and animations created using React Native
 
-![](https://github.com/AnshulRaghav/react-native-screens/blob/master/Screenshots/Picture1.png | width=100)
+<img src="https://github.com/AnshulRaghav/react-native-screens/blob/master/Screenshots/Picture1.png" alt="scr" width="200" height="300">
